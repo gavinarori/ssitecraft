@@ -1,4 +1,4 @@
-export const Extra = () =>{
+const Extra = () =>{
     return(
         <div className="bg-gradient-to-t from-slate-50 to-yellow-100 relative  pb-20 lg:pt-44 ">
         <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
@@ -55,3 +55,5 @@ export const Extra = () =>{
     </div>
     )
 }
+
+export default Extra;

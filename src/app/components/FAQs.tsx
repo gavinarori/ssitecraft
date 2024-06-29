@@ -1,4 +1,4 @@
-export const FAQs =  () =>{
+ const FAQs =  () =>{
     return (
         <section className="flex justify-center items-center ">
                <div className="space-y-4 ">
@@ -54,3 +54,5 @@ export const FAQs =  () =>{
      
     )
 }
+
+export default FAQs;

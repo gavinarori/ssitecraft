@@ -1,4 +1,4 @@
-export const Services = () =>{
+const Services = () =>{
     return (
         <div className="py-16 bg-gradient-to-b from-slate-50 to-yellow-100">  
     <div className="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
@@ -40,3 +40,5 @@ export const Services = () =>{
 </div>
     )
 }
+
+export default Services;
