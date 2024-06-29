@@ -7,6 +7,8 @@ import { Footer } from "./components/Footer/page";
 import { Testimonial } from "./components/Testimonial/page"; 
 import { CTA } from "./components/Ctas/page";
 import Statistics from "./components/Stats";
+import { Extra } from "./components/Extra";
+import { FAQs } from "./components/FAQs";
 
 export default function Home() {
   return (
@@ -16,8 +18,9 @@ export default function Home() {
       <Landing />
       <Statistics  />
       <Services />
+      <Extra />  
       <Testimonial />
-      <CTA />
+      <FAQs/>
       <Footer />
      
     </main>

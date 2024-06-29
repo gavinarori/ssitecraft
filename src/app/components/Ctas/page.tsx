@@ -1,6 +1,6 @@
 export const CTA = () => {
     return (
-        <div className="flex flex-col justify-center items-center h-auto">
+        <div className="flex flex-col justify-center items-center h-auto bg-gradient-to-t from-slate-50 to-yellow-100">
             <div
   className="flex w-full flex-col rounded-2xl bg-cover px-[30px] py-[30px] md:px-[64px] md:py-[56px] max-w-[95%] xl:max-w-[800px] "
   style={{ backgroundImage: 'url("https://raw.githubusercontent.com/horizon-ui/horizon-tailwind-react-ts-corporate/main/src/assets/img/nfts/NftBanner1.png")' }}
