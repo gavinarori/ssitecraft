@@ -1,6 +1,37 @@
+"use client"
+import React, { useRef, useEffect } from 'react';
+import 'keen-slider/keen-slider.min.css'
+import KeenSlider, { KeenSliderOptions } from 'keen-slider';
 const Testimonial = () =>{
+  
+  useEffect(() => {
+    const keenSlider = new KeenSlider('.keen-slider', {
+      loop: true,
+    });
+
+
+    const keenSliderPrevious = document.getElementById('keen-slider-previous');
+    const keenSliderNext = document.getElementById('keen-slider-next');
+    const keenSliderPreviousDesktop = document.getElementById('keen-slider-previous-desktop');
+    const keenSliderNextDesktop = document.getElementById('keen-slider-next-desktop');
+
+    keenSliderPrevious?.addEventListener('click', () => keenSlider.prev());
+    keenSliderNext?.addEventListener('click', () => keenSlider.next());
+    keenSliderPreviousDesktop?.addEventListener('click', () => keenSlider.prev());
+    keenSliderNextDesktop?.addEventListener('click', () => keenSlider.next());
+
+    return () => {
+      keenSlider.destroy();
+      keenSliderPrevious?.removeEventListener('click', () => keenSlider.prev());
+      keenSliderNext?.removeEventListener('click', () => keenSlider.next());
+      keenSliderPreviousDesktop?.removeEventListener('click', () => keenSlider.prev());
+      keenSliderNextDesktop?.removeEventListener('click', () => keenSlider.next());
+    };
+  }, []);
+
+  
     return (
-<section className="bg-gray-50">
+<section className="bg-gradient-to-b from-slate-50 to-yellow-100">
   <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
       <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
@@ -62,10 +93,10 @@ const Testimonial = () =>{
         <div id="keen-slider" className="keen-slider">
           <div className="keen-slider__slide">
             <blockquote
-              className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+              className="flex h-full flex-col justify-between bg-gradient-to-b from-slate-50 to-yellow-100 p-6 shadow-sm sm:p-8 lg:p-12"
             >
               <div>
-                <div className="flex gap-0.5 text-green-500">
+                <div className="flex gap-0.5 text-blue-500">
                   <svg
                     className="h-5 w-5"
                     fill="currentColor"
@@ -141,10 +172,10 @@ const Testimonial = () =>{
 
           <div className="keen-slider__slide">
             <blockquote
-              className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+              className="flex h-full flex-col justify-between bg-gradient-to-b from-slate-50 to-yellow-100 p-6 shadow-sm sm:p-8 lg:p-12"
             >
               <div>
-                <div className="flex gap-0.5 text-green-500">
+                <div className="flex gap-0.5 text-blue-500">
                   <svg
                     className="h-5 w-5"
                     fill="currentColor"
@@ -220,10 +251,10 @@ const Testimonial = () =>{
 
           <div className="keen-slider__slide">
             <blockquote
-              className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+              className="flex h-full flex-col justify-between bg-gradient-to-b from-slate-50 to-yellow-100 p-6 shadow-sm sm:p-8 lg:p-12"
             >
               <div>
-                <div className="flex gap-0.5 text-green-500">
+                <div className="flex gap-0.5 text-blue-500">
                   <svg
                     className="h-5 w-5"
                     fill="currentColor"

@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () =>{
     return(
-<footer className="bg-white">
+<footer className="bg-gradient-to-b from-slate-50 to-yellow-100">
   <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8">
     <div className="lg:flex lg:items-center lg:justify-between">
       <div className="flex justify-center text-teal-600 sm:justify-start">
@@ -59,31 +59,7 @@ const Footer = () =>{
     <div
       className="mt-16 grid grid-cols-1 gap-8 border-t border-gray-100 pt-16 md:grid-cols-4 lg:grid-cols-6"
     >
-      <div className="text-center sm:text-left">
-        <p className="text-lg font-medium text-gray-900">About Us</p>
 
-        <ul className="mt-8 space-y-4 text-sm">
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#">
-              Company History
-            </a>
-          </li>
-
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Meet the Team </a>
-          </li>
-
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#">
-              Employee Handbook
-            </a>
-          </li>
-
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Careers </a>
-          </li>
-        </ul>
-      </div>
 
       <div className="text-center sm:text-left">
         <p className="text-lg font-medium text-gray-900">Our Services</p>
