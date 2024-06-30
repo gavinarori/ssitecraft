@@ -2,13 +2,13 @@ const Extra = () =>{
     return(
         <div className="bg-gradient-to-t from-slate-50 to-yellow-100 relative  pb-20 lg:pt-44 ">
         <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-            <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl dark:text-white">Run successful remote and <br className="lg:block hidden"></br> <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Hybrid teams</span>.</h1>
+            <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl ">Run successful remote and <br className="lg:block hidden"></br> <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Hybrid teams</span>.</h1>
             <div className="lg:flex">
                 <div className="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
-                    <p className="sm:text-lg text-gray-700 dark:text-gray-300 lg:w-11/12">
+                    <p className="sm:text-lg text-gray-700  lg:w-11/12">
                         DailyBot takes chat and collaboration to the next level: daily standups, team check-ins, surveys, kudos, best companion bot for your virtual watercooler, 1:1 intros, motivation tracking and more.
                     </p>
-                    <span className="block font-semibold text-gray-500 dark:text-gray-400">The best companion bot for your chat app.</span>
+                    <span className="block font-semibold text-gray-500 ">The best companion bot for your chat app.</span>
                     <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
                         <a aria-label="add to slack" href="#" className="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30">
                             <div className="flex justify-center space-x-4">

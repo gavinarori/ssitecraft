@@ -6,7 +6,7 @@ const stats = [
 
 export default function Stastics() {
   return (
-    <div className="">
+    <div className="bg-gradient-to-t from-gray-50 to-yellow-100">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
           {stats.map((stat) => (

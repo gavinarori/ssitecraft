@@ -1,6 +1,6 @@
  const FAQs =  () =>{
     return (
-        <section className="flex justify-center items-center ">
+        <section className="flex justify-center items-center bg-gradient-to-t from-slate-50 to-yellow-100 ">
                <div className="space-y-4 ">
   <details className="group [&_summary::-webkit-details-marker]:hidden" open>
     <summary
