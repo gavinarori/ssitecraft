@@ -1,6 +1,14 @@
 const Services = () =>{
     return (
-        <div className="py-16 bg-gradient-to-b from-slate-50 to-yellow-100">  
+        <div className="py-16 bg-gradient-to-b from-slate-50 to-yellow-100">
+            <div className="mx-auto max-w-lg text-center mb-10">
+    <h1 className="text-2xl font-bold sm:text-3xl">Get started today!</h1>
+
+    <p className="mt-4 text-gray-500">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla eaque error neque
+      ipsa culpa autem, at itaque nostrum!
+    </p>
+  </div>  
     <div className="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
         <div className="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-3">
             <div className="bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">

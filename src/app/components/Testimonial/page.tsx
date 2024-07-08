@@ -31,7 +31,7 @@ const Testimonial = () =>{
 
   
     return (
-<section className="bg-gradient-to-b from-slate-50 to-yellow-100">
+<section className="bg-gradient-to-b from-yellow-100 to-slate-50">
   <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
       <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">

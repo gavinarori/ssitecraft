@@ -1,7 +1,16 @@
  const FAQs =  () =>{
     return (
-        <section className="flex justify-center items-center bg-gradient-to-t from-slate-50 to-yellow-100 ">
+        <section className="flex justify-center items-center bg-gradient-to-b from-slate-50 to-yellow-100 ">
+          
                <div className="space-y-4 ">
+               <div className="mx-auto max-w-lg text-center mb-10">
+    <h1 className="text-2xl font-bold sm:text-3xl">Get started today!</h1>
+
+    <p className="mt-4 text-gray-500">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla eaque error neque
+      ipsa culpa autem, at itaque nostrum!
+    </p>
+  </div>
   <details className="group [&_summary::-webkit-details-marker]:hidden" open>
     <summary
       className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
