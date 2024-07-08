@@ -1,6 +1,6 @@
 const Extra = () =>{
     return(
-        <div className="bg-gradient-to-t from-slate-50 to-yellow-100 relative  pb-20 lg:pt-44 ">
+        <div className="bg-gradient-to-t from-slate-50 to-yellow-100 relative  pb-40 lg:pt-44 ">
         <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
             <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl ">Run successful remote and <br className="lg:block hidden"></br> <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Hybrid teams</span>.</h1>
             <div className="lg:flex">

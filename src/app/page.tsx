@@ -8,6 +8,7 @@ import  Testimonial  from "./components/Testimonial/page";
 import Statistics from "./components/Stats";
 import  Extra  from "./components/Extra";
 import  FAQs  from "./components/FAQs";
+import Pricing from "./components/pricing";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Statistics  />
       <Services />
       <Extra />  
+      <Pricing />
       <Testimonial />
       <FAQs/>
       <Footer />
