@@ -1,6 +1,11 @@
+"use client";
+import React from "react";
+import { ContainerScroll } from "../components/ui/container-scroll-animation";
+import Image from "next/image";
+
 const Extra = () =>{
     return(
-        <div className="bg-gradient-to-t from-slate-50 to-yellow-100 relative  pb-40 lg:pt-44 ">
+        <div className=" relative  pb-40 lg:pt-44 ">
         <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
             <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl ">Run successful remote and <br className="lg:block hidden"></br> <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Hybrid teams</span>.</h1>
             <div className="lg:flex">
@@ -44,11 +49,28 @@ const Extra = () =>{
                        <img src="https://tailus.io/sources/blocks/tech-startup/preview/images/clients/microsoft.svg" className="h-8 sm:h-10 w-auto lg:h-12" alt="" />
                    </div>
                 </div>
-                <div className="mt-12 md:mt-0 lg:absolute -right-10 lg:w-7/12">
-                    <div className="relative w-full">
-                        <div aria-hidden="true" className="absolute scale-75 md:scale-110 inset-0 m-auto w-full h-full md:w-96 md:h-96 rounded-full rotate-45 bg-gradient-to-r from-sky-500 to-cyan-300 blur-3xl"></div>
-                        <img src="https://tailus.io/sources/blocks/tech-startup/preview/images/globalization-cuate.svg" className="relative w-full" alt="wath illustration" loading="lazy" width="320" height="280"/>
-                    </div>
+                <div className="mt-12 md:mt-0 lg:absolute top-0 right-10 lg:w-7/12">
+                     <ContainerScroll
+        titleComponent={
+          <>
+            <h1 className="text-4xl font-semibold text-black dark:text-white">
+              Unleash the power of <br />
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                Scroll Animations
+              </span>
+            </h1>
+          </>
+        }
+      >
+        <Image
+          src={`/linear.webp`}
+          alt="hero"
+          height={720}
+          width={1400}
+          className="mx-auto rounded-2xl object-cover h-full object-left-top"
+          draggable={false}
+        />
+      </ContainerScroll>
                 </div>
             </div>
         </div>
