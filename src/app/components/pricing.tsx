@@ -1,6 +1,6 @@
 const Pricing = () =>{
     return (
-        <div className="max-w-screen-xl  bg-gradient-to-b from-slate-50 to-yellow-100 px-4 py-4 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+        <div className="max-w-screen-xl    px-4 py-4 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
             <div className="mx-auto max-w-lg text-center mb-10">
     <h1 className="text-2xl font-bold sm:text-3xl">Get started today!</h1>
 

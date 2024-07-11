@@ -2,6 +2,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { FlipWords } from "../ui/flip-words";
+import { Button } from "../ui/moving-border";
+import { motion } from "framer-motion";
+import { HeroHighlight, Highlight } from "../ui/hero-highlight";
  
 const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
   ssr: false,
@@ -409,7 +412,9 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
       <h1 className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
         Build
         <FlipWords words={words} /> <br />
-        websites with WeTogether
+        websites with  <Highlight className="text-black dark:text-white">
+          WeTogether
+        </Highlight>
       </h1>
 
         <p className="mt-4 text-gray-600">
@@ -418,12 +423,14 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
           quidem quam repellat.
         </p>
 
-        <a
-          href="#"
-          className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-        >
-          Get Started Today
-        </a>
+        <div className="py-12">
+      <Button
+        borderRadius="1.75rem"
+        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+      >
+        Get started
+      </Button>
+    </div>
       </div>
     </div>
   </div>
