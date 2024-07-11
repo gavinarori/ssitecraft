@@ -1,6 +1,6 @@
  const FAQs =  () =>{
     return (
-        <section className="flex justify-center items-center bg-gradient-to-b from-slate-50 to-yellow-100 ">
+        <section className="flex justify-center items-center  ">
           
                <div className="space-y-4 ">
                <div className="mx-auto max-w-lg text-center mb-10">
