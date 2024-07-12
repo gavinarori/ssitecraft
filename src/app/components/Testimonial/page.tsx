@@ -16,35 +16,35 @@ function InfiniteMovingCardsDemo() {
 }
 
 export default InfiniteMovingCardsDemo;
-
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "This agency transformed our online presence! Their professionalism and expertise resulted in a beautiful, user-friendly website that has significantly boosted our business.",
+    name: "Jane Doe",
+    title: "CEO, Tech Innovators",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+      "Working with this agency was a fantastic experience. They delivered everything on time, and the quality of their work exceeded our expectations. Highly recommended!",
+    name: "John Smith",
+    title: "Marketing Director, Creative Solutions",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+      "The team's attention to detail and commitment to customer satisfaction were outstanding. Our new website has received rave reviews from our clients, and we couldn't be happier!",
+    name: "Alice Johnson",
+    title: "Founder, Health & Wellness Co.",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "From start to finish, the process was smooth and stress-free. The final product is not only visually appealing but also functional and easy to navigate. We are thrilled with the results!",
+    name: "Michael Brown",
+    title: "Owner, Brown's Bakery",
+  },
+  {
+    quote:
+      "Their innovative approach and creative solutions helped us stand out in a crowded market. The new site has increased our traffic and conversions substantially. Excellent work!",
+    name: "Sarah Williams",
+    title: "Marketing Manager, Fashion Forward",
   },
 ];
