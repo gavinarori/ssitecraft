@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { ContainerScroll } from "../components/ui/container-scroll-animation";
+import { motion } from "framer-motion";
+import { LampContainer } from "../components/ui/lamp";
 import Image from "next/image";
 
 const Extra = () => {
@@ -103,27 +105,20 @@ const Extra = () => {
                 className="absolute scale-75 md:scale-110 inset-0 m-auto w-full h-full md:w-96 md:h-96 rounded-full rotate-45 bg-gradient-to-r from-sky-500 to-cyan-300 blur-3xl"
               ></div>
               <div className="flex flex-col overflow-hidden">
-                <ContainerScroll
-                  titleComponent={
-                    <>
-                      <h1 className="text-4xl font-semibold text-black dark:text-white">
-                        Unleash the power of <br />
-                        <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                          Scroll Animations
-                        </span>
-                      </h1>
-                    </>
-                  }
-                >
-                  <Image
-                    src={`/linear.webp`}
-                    alt="hero"
-                    height={720}
-                    width={1400}
-                    className="mx-auto rounded-2xl object-cover h-full object-left-top"
-                    draggable={false}
-                  />
-                </ContainerScroll>
+              <LampContainer>
+      <motion.h1
+        initial={{ opacity: 0.5, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+      >
+        Build lamps <br /> the right way
+      </motion.h1>
+    </LampContainer>
               </div>
             </div>
           </div>
