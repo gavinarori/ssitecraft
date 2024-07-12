@@ -9,6 +9,7 @@ import  {MacbookScrollDemo} from "./components/Stats";
 import  Extra  from "./components/Extra";
 import  FAQs  from "./components/FAQs";
 import Pricing from "./components/pricing";
+import { HeroScrollDemo } from "./components/containerScroll";
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
       <Landing />
       <MacbookScrollDemo />
       <Services />
-      <Extra />  
+      <Extra /> 
+      <HeroScrollDemo />
       <Pricing />
       <InfiniteMovingCardsDemo />
       <FAQs/>
