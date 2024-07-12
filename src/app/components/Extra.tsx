@@ -9,38 +9,17 @@ const Extra = () => {
   return (
     <div className="relative  lg:pt-44">
       <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-      <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl ">Run successful remote and <br className="lg:block hidden"></br> <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Hybrid teams</span>.</h1>
+      <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-black/50 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl pb-3">Schedule a Call with Us Today!
+      </h1>
         <div className="lg:flex">
           <div className="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
             <p className="sm:text-lg text-gray-700 lg:w-11/12">
-              DailyBot takes chat and collaboration to the next level: daily
-              standups, team check-ins, surveys, kudos, best companion bot for
-              your virtual watercooler, 1:1 intros, motivation tracking and
-              more.
+            Are you ready to take the next step and discuss how we can help you achieve your goals? We'd love to schedule a call with you to explore how our services can benefit your business.
             </p>
             <span className="block font-semibold text-gray-500">
-              The best companion bot for your chat app.
+              The best platforms to schedule with us.
             </span>
             <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
-              <a
-                aria-label="add to slack"
-                href="#"
-                className="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
-              >
-                <div className="flex justify-center space-x-4">
-                  <img
-                    className="w-6 h-6"
-                    src="https://tailus.io/sources/blocks/tech-startup/preview/images/slack.png"
-                    alt="slack logo"
-                    loading="lazy"
-                    width="128"
-                    height="12/8"
-                  />
-                  <span className="hidden font-medium md:block dark:text-white">
-                    Slack
-                  </span>
-                </div>
-              </a>
               <a
                 aria-label="add to chat"
                 href="#"
@@ -49,14 +28,14 @@ const Extra = () => {
                 <div className="flex justify-center space-x-4">
                   <img
                     className="w-6 h-6"
-                    src="https://tailus.io/sources/blocks/tech-startup/preview/images/chat.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/640px-Google_Meet_icon_%282020%29.svg.png"
                     alt="chat logo"
                     loading="lazy"
                     width="128"
                     height="128"
                   />
                   <span className="hidden font-medium md:block dark:text-white">
-                    Google Chat
+                    Google meet
                   </span>
                 </div>
               </a>
@@ -81,22 +60,7 @@ const Extra = () => {
               </a>
             </div>
 
-            <div className="dark:text-gray-300">
-              🔥🌟
-              <span>Other integrations :</span>
-              <a
-                href="#"
-                className="font-semibold text-gray-700 dark:text-gray-200"
-              >
-                Discord,
-              </a>
-              <a
-                href="#"
-                className="font-semibold text-gray-700 dark:text-gray-200"
-              >
-                Telegram
-              </a>
-            </div>
+            
           </div>
           <div className="mt-12 md:mt-0 lg:mt-0 lg:w-7/12 lg:pl-10">
             <div className="relative w-full">
@@ -116,7 +80,7 @@ const Extra = () => {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Build lamps <br /> the right way
+       Don't hesitate  <br /> to reach out
       </motion.h1>
     </LampContainer>
               </div>

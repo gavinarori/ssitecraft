@@ -51,8 +51,8 @@ export function MacbookScrollDemo() {
     <div className="overflow-hidden dark:bg-[#0B0B0F] sm:-mt-20 h-auto  bg-white w-full">
       <MacbookScroll
         title={
-          <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
+          <span className="">
+            Unlock Business Growth with a Professional Website
           </span>
         }
         badge={
@@ -60,7 +60,7 @@ export function MacbookScrollDemo() {
             <Badge className="h-10 w-10 transform -rotate-12" />
           </Link>
         }
-        src={`/linear.webp`}
+        src={`https://img.freepik.com/free-vector/user-panel-business-dashboard_23-2148359901.jpg?t=st=1720770183~exp=1720773783~hmac=4feab500bab151f53de26be9c8c7de1c52bcdaad17961db81003bb19fb744a15&w=740`}
         showGradient={false}
       />
     </div>

@@ -10,6 +10,7 @@ import  Extra  from "./components/Extra";
 import  FAQs  from "./components/FAQs";
 import Pricing from "./components/pricing";
 import { HeroScrollDemo } from "./components/containerScroll";
+import { HeroParallaxDemo } from "./components/templates";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Services />
       <Extra /> 
       <HeroScrollDemo />
+      <HeroParallaxDemo/>
       <Pricing />
       <InfiniteMovingCardsDemo />
       <FAQs/>

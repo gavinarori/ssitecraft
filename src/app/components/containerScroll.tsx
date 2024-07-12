@@ -10,16 +10,14 @@ export function HeroScrollDemo() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black dark:text-white">
-              Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                Scroll Animations
-              </span>
+            Let's Build Something <br />Amazing Together!
+
             </h1>
           </>
         }
       >
         <Image
-          src={`/linear.webp`}
+          src={`/wetoger_1.jpeg`}
           alt="hero"
           height={720}
           width={1400}
