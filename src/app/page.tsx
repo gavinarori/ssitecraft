@@ -25,7 +25,6 @@ export default function Home() {
       <HeroParallaxDemo/>
       <Pricing />
       <InfiniteMovingCardsDemo />
-      <FAQs/>
       <Footer />
      
     </main>
