@@ -125,6 +125,7 @@ const Collections = () => {
             ))}
           </ul>
         </div>
+        <p className="flex justify-center items-center text-lg">payment method coming soon....</p>
       </section>
     );
   };
