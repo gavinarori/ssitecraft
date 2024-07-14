@@ -55,10 +55,9 @@ const Collections = () => {
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
           <header>
-            <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
+            <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">Templates Collection</h2>
             <p className="mt-4 max-w-md text-gray-500">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
-              dicta incidunt est ipsam, officia dolor fugit natus?
+            Purchase High Quality Template For Your Website
             </p>
           </header>
   
@@ -126,6 +125,7 @@ const Collections = () => {
             ))}
           </ul>
         </div>
+        <p className="flex justify-center items-center text-lg">payment method coming soon....</p>
       </section>
     );
   };
