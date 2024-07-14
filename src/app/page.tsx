@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Header from '@/app/components/header/page'
 import Announcement from '@/app/components/Announcement/page'
 import  Landing  from "./components/landing/page";
 import  Services  from "./components/services/page";
@@ -15,7 +14,6 @@ import { HeroParallaxDemo } from "./components/templates";
 export default function Home() {
   return (
     <main className=" ">
-      <Header />
       <Announcement />
       <Landing />
       <MacbookScrollDemo />

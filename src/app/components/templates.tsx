@@ -21,14 +21,14 @@ export function HeroParallaxDemo() {
           </p>
           <div className="flex flex-wrap gap-6">
             <a
-              href="#"
+              href="/components/collections"
               className="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
             >
               <span className="relative text-base font-semibold text-black/50 dark:text-dark"
                 >Shop now</span>
             </a>
             <a
-              href="#"
+              href="/components/collections"
               className="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
             >
               <span
@@ -41,8 +41,8 @@ export function HeroParallaxDemo() {
         <div className="grid grid-cols-5 grid-rows-4 gap-2 md:w-5/12 lg:w-6/12 ">
           <div className="col-span-2 row-span-4">
             <img
-              src="https://aceternity.com/images/products/thumbnails/new/editrix.png"
-              className="rounded-full"
+              src="https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea7_goldfinch-thumb.webp"
+              className="rounded-lg"
               width="640"
               height="960"
               alt="shoes"
@@ -52,7 +52,7 @@ export function HeroParallaxDemo() {
           </div>
           <div className="col-span-2 row-span-2">
             <img
-              src="https://aceternity.com/images/products/thumbnails/new/cursor.png"
+              src="https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/663904668f8979077697f0fd_Untitled%20design%20(1).png"
               className="h-full w-full rounded-xl object-cover object-top"
               width="640"
               height="640"
@@ -63,7 +63,7 @@ export function HeroParallaxDemo() {
           
           <div className="col-span-3 row-span-3">
             <img
-              src="https://aceternity.com/images/products/thumbnails/new/rogue.png"
+              src="https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6638fc5db95cf1175bd394ef_Untitled%20design.png"
               className="h-full w-full rounded-xl object-cover object-top"
               width="640"
               height="427"
@@ -73,7 +73,7 @@ export function HeroParallaxDemo() {
           </div>
           <div className="col-span-2 row-span-2">
             <img
-              src="https://aceternity.com/images/products/thumbnails/new/rogue.png"
+              src="https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e97_Warble-0r.png"
               className="h-full w-full rounded-xl object-cover object-top"
               width="640"
               height="427"
