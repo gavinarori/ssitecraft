@@ -409,15 +409,15 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
       </div>
 
       <div className="lg:py-24">
-      <h1 className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+      <h1 className="text-4xl uppercase font-bold text-gray-800 md:text-5xl w-full dark:text-white">
         Build
         <FlipWords words={words} /> <br />
-        websites with  <Highlight className="text-black dark:text-white">
+        websites with  <Highlight className="text-black dark:text-white mt-2">
           WeTogether
         </Highlight>
       </h1>
 
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
         Unlock the Full Potential of Your Business with Custom Web Applications: Our team of skilled developers will work with you to design and build a tailored web application that meets your unique needs and goals, helping you stay ahead of the competition.
         </p>
 

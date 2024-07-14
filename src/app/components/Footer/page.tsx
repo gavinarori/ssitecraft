@@ -6,7 +6,7 @@ const Footer = () =>{
   <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8">
     <div className="lg:flex lg:items-center lg:justify-between">
       <div className="flex justify-center  sm:justify-start">
-      <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+      <img className="h-16 w-16" src="https://cdn.vectorstock.com/i/preview-1x/65/23/three-happy-people-with-hands-together-logo-vector-10306523.jpg" alt="" />
       </div>
 
       
@@ -76,7 +76,7 @@ const Footer = () =>{
 
         <div className="mx-auto mt-8 max-w-md sm:ms-0">
           <p className="text-center leading-relaxed text-gray-500 ltr:sm:text-left rtl:sm:text-right">
-          Get the inside scoop! Our newsletter is your go-to source for the latest trends, tools, and strategies to help you succeed in the digital landscape. Subscribe now and stay informed, inspired, and ahead of the competition!
+          Get the inside scoop! Our newsletter is your go-to source for the latest trends, tools, and strategies to help you succeed in the digital landscape.
           </p>
 
           <form className="mt-4">

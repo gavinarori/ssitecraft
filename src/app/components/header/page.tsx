@@ -38,7 +38,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+            <img className="h-16 w-16" src="https://cdn.vectorstock.com/i/preview-1x/65/23/three-happy-people-with-hands-together-logo-vector-10306523.jpg" alt="" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -54,7 +54,7 @@ export default function Example() {
         <PopoverGroup className="hidden lg:flex gap-x-1">
           
 
-          <a href="/components/Inbox" className="text-sm font-semibold text-blue-600 leading-6 ">
+          <a href="/components/collections" className="text-sm font-semibold text-blue-600 leading-6 ">
           Templates
           </a>
           
@@ -96,7 +96,7 @@ export default function Example() {
               <div className="space-y-2 py-6">
                 
                 <a
-                  href=""
+                  href="/components/collections"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Templates
