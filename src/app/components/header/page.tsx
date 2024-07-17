@@ -91,12 +91,11 @@ export default function Example() {
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
-            <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-            Get a Website that Meets Your Expectations with {" "}
+          <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
+          Your customers are online, {" "}
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
-              Our Expert Web Development
+              are you ?
               </span>{" "}
-              Services! 
             </h4>
             <div className="flex justify-center items-center">
               {images.map((image, idx) => (
@@ -220,11 +219,10 @@ export default function Example() {
         <ModalBody>
           <ModalContent>
           <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-            Get a Website that Meets Your Expectations with {" "}
+          Your customers are online, {" "}
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
-              Our Expert Web Development
+              are you ?
               </span>{" "}
-              Services! 
             </h4>
             <div className="flex justify-center items-center">
               {images.map((image, idx) => (
