@@ -160,9 +160,7 @@ export default function Example() {
             </div>
           </ModalContent>
           <ModalFooter className="gap-4">
-            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
-              Cancel
-            </button>
+            
             <a href='https://forms.gle/bGaxqr7fvHddxxVi9' className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 text-center rounded-md border border-black w-28">
               Book Now
             </a>
@@ -267,18 +265,6 @@ export default function Example() {
                 </span>
               </div>
               <div className="flex items-center justify-center">
-                <VacationIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                project management
-                </span>
-              </div>
-              <div className="flex  items-center justify-center">
-                <FoodIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                visibility and promotion
-                </span>
-              </div>
-              <div className="flex items-center justify-center">
                 <MicIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                 Progress communication
@@ -287,9 +273,7 @@ export default function Example() {
             </div>
           </ModalContent>
           <ModalFooter className="gap-4">
-            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
-              Cancel
-            </button>
+           
             <a href='https://forms.gle/bGaxqr7fvHddxxVi9' className="bg-black text-white text-center dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
               Book Now
             </a>
