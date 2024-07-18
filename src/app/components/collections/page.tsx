@@ -105,7 +105,7 @@ const Collections = () => {
         <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {products.map(product => (
             <li key={product.id}>
-              <a href="#" className="group block overflow-hidden">
+              <a href={`/components/collections/${product.id}`} className="group block overflow-hidden">
                 <img
                   src={product.imgSrc}
                   alt=""
