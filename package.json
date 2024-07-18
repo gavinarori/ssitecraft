@@ -11,9 +11,12 @@
   "dependencies": {
     "@headlessui/react": "^2.1.1",
     "@heroicons/react": "^2.1.4",
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "@paypal/react-paypal-js": "^8.5.0",
     "@react-three/drei": "^9.108.3",
     "@react-three/fiber": "^8.16.8",
     "@tabler/icons-react": "^3.10.0",
+    "axios": "^1.7.2",
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
     "framer-motion": "^11.3.2",
