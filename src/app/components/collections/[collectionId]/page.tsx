@@ -92,6 +92,7 @@ const products = [
 const ProductDetails = ({ params }:any) => {
   const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(true);
   const { PaymentModal, setShowPaymentModal } = usePaymentModal();
+  const router = useRouter();
    
   const paypalCreateOrder = async (data: any, actions: any) => {
     return actions.order.create({
@@ -110,6 +111,9 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
   return actions.order.capture().then(function (details: any) {
     console.log("Transaction completed by " + details.payer.name.given_name);
     setShowPaymentModal(true);
+    setTimeout(()=> {
+      router.push("/components/paid")
+    }, 4000)
   });
 };
 
