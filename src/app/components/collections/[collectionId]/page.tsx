@@ -6,6 +6,8 @@ import axios from 'axios';
 import Link from "next/link";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Marquee from "@/app/components/ui/marquee";
+import Successful from "@/app/components/ui/successful";
+import { useRouter } from 'next/navigation';
 
 const products = [
   {
@@ -59,117 +61,7 @@ const products = [
   }
 ];
 
-{/**"use client";
 
-import { useState } from 'react';
-import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
-import axios from 'axios';
-
-const products = [
-    // Your products array here
-];
-
-const ProductDetails = ({ params }: any) => {
-    const paypalCreateOrder = async (data: any, actions: any) => {
-        try {
-            const response = await axios.post('/api/paypal/create-order', {
-                product: {
-                    price: product?.price
-                }
-            });
-            return response.data.id;
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
-    const paypalCaptureOrder = async (data: any, actions: any) => {
-        try {
-            const response = await axios.post('/api/paypal/capture-order', {
-                orderID: data.orderID
-            });
-            console.log('Transaction completed by ' + response.data.payer.name.given_name);
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
-    const { collectionId } = params;
-    const product = products.find(p => p.id === parseInt(collectionId));
-
-    if (!product) return <p>Product not found</p>;
-
-    return (
-        <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4 max-w-screen">
-            <div className="xl:w-2/6 lg:w-2/5 w-80 md:block">
-                <div className="flex flex-wrap gap-6 pb-3">
-                    <a
-                        href=""
-                        className="relative flex bg-slate-800 h-12 w-full items-center rounded-full justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-                    >
-                        <span className="relative text-base font-semibold text-white">Preview</span>
-                    </a>
-                    <a
-                        href=""
-                        className="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
-                    >
-                        <span className="relative text-base font-semibold text-primary dark:text-white">More about</span>
-                    </a>
-                </div>
-                <img className="w-full h-auto rounded-lg" alt="image of a girl posing" src={product.imgSrc} />
-            </div>
-            <div className="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-20">
-                <div className="border-b border-gray-200 pb-6">
-                    <p className="text-sm leading-none text-gray-600 dark:text-gray-300 ">Balenciaga Fall Collection</p>
-                    <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">{product.title}</h1>
-                </div>
-                <div className="py-4 border-b border-gray-200 flex items-center justify-between">
-                    <p className="text-base leading-4 text-gray-800 dark:text-gray-300">Pricing</p>
-                    <div className="flex items-center justify-center">
-                        <p className="text-sm leading-none text-gray-600 dark:text-gray-300 mr-3">${product.price}</p>
-                        <svg className="text-gray-300 dark:text-white cursor-pointer" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L5 5L1 9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </div>
-                </div>
-                <PayPalScriptProvider
-                    options={{
-                        clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!,
-                        currency: 'USD',
-                        intent: 'capture'
-                    }}
-                >
-                    <PayPalButtons
-                        style={{
-                            color: 'gold',
-                            shape: 'rect',
-                            label: 'pay',
-                            height: 50
-                        }}
-                        createOrder={paypalCreateOrder}
-                        onApprove={paypalCaptureOrder}
-                    />
-                </PayPalScriptProvider>
-                <div>
-                    <div className="border-t border-b py-4 mt-7 border-gray-200">
-                        <div data-menu className="flex justify-between items-center cursor-pointer">
-                            <p className="text-base leading-4 text-gray-800 dark:text-gray-300">Shipping and returns</p>
-                            <button className="cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 rounded" role="button" aria-label="show or hide">
-                                <svg className="transform text-gray-300 dark:text-white" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 1L5 5L1 1" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div className="hidden pt-4 text-base leading-normal pr-12 mt-4 text-gray-600 dark:text-gray-300" id="sect">You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are nonrefundable</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
-
-export default ProductDetails;
- */}
 
  function ShowcaseCard({ product }:any) {
   return (
@@ -198,6 +90,7 @@ export default ProductDetails;
 
 
 const ProductDetails = ({ params }:any) => {
+  const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(true);
    
   const paypalCreateOrder = async (data: any, actions: any) => {
     return actions.order.create({
@@ -210,19 +103,27 @@ const ProductDetails = ({ params }:any) => {
         ],
     });
 };
+
+
 const paypalCaptureOrder = async (data: any, actions: any) => {
   return actions.order.capture().then(function (details: any) {
-      console.log('Transaction completed by ' + details.payer.name.given_name);
-      // Call your server to save the transaction
+    console.log("Transaction completed by " + details.payer.name.given_name);
+    setIsPaymentSuccessful(true);
+    setTimeout(() => {
+      // Redirect after showing the success message
+      window.location.href = "/path/to/redirect"; // Replace with your redirection path
+    }, 3000); // 3 seconds delay
   });
 };
-
 
 
   const { collectionId } = params;
   const product = products.find(p => p.id === parseInt(collectionId));
   if (!product) return <p>Product not found</p>;
 
+  if (isPaymentSuccessful) {
+    return <Successful />;
+  }
   return (
     <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4 max-w-screen ">
 
