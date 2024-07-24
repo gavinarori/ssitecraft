@@ -2,25 +2,41 @@
 import Image from "next/image";
 import React from "react";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
+import Modal from "./modal";
+import {
+  useState,
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useMemo,
+} from "react";
 
-const Successful = () => {
-    const words = [
-        {
-          text: "Payment",
-        },
-        {
-          text: "Confirmed",
-        },
-        {
-          text: "Successfully.",
-          className: "text-blue-500 dark:text-blue-500",
-        },
-      ];
-    return (
-      <>
-          return (
-            <div
-              className="bg-[#F5F5F7] p-8 md:p-14 rounded-3xl mb-4"
+
+const PaymentModal = ({
+  showPaymentModal,
+  setShowPaymentModal,
+}: {
+  showPaymentModal: boolean;
+  setShowPaymentModal: Dispatch<SetStateAction<boolean>>;
+}) => {
+
+  
+ 
+  const words = [
+    {
+      text: "Payment",
+    },
+    {
+      text: "Confirmed",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
+
+
+  return (
+    <Modal showModal={showPaymentModal} setShowModal={setShowPaymentModal}>
+      <div
+              className="bg-[#F5F5F7] p-8 md:p-14 rounded-3xl mb-4 h-auto w-auto"
             >
                 <Image
                 src="https://clipart-library.com/images/qcBBexbc5.png"
@@ -33,11 +49,24 @@ const Successful = () => {
               <TypewriterEffectSmooth words={words} />
               </p>
             </div>
-          );
-      </>
-    );
-  };
-   
+    </Modal>
+  );
+};
 
-  export default Successful;
-  
+export function usePaymentModal() {
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
+
+  const PaymentModalCallback = useCallback(() => {
+    return (
+      <PaymentModal
+        showPaymentModal={showPaymentModal}
+        setShowPaymentModal={setShowPaymentModal}
+      />
+    );
+  }, [showPaymentModal, setShowPaymentModal]);
+
+  return useMemo(
+    () => ({ setShowPaymentModal, PaymentModal: PaymentModalCallback }),
+    [setShowPaymentModal, PaymentModalCallback],
+  );
+}
