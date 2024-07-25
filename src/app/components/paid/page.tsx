@@ -1,11 +1,14 @@
 import OrbitingCircles from "@/app/components/ui/avatar-circles";
-
+import { useRouter } from 'next/router';
 import { cn } from "@/utils/cn";
 import GridPattern from "@/app/components/ui/grid";
 import DotPattern from "@/app/components/ui/dot";
+import { products } from "../collections/[collectionId]/page";
  
 
 const PaidProducts = () =>{
+  
+
     return(
         <div className="py-16">
   <div className="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-16">
@@ -153,7 +156,7 @@ const PaidProducts = () =>{
       </div>
       
     </div>
-    
+
 </div>
          
     )

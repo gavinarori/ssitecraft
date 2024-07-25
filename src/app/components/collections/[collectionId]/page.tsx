@@ -9,7 +9,7 @@ import Marquee from "@/app/components/ui/marquee";
 import { usePaymentModal } from '@/app/components/ui/successful';
 import { useRouter } from 'next/navigation';
 
-const products = [
+export const products = [
   {
     id: 1,
     title: "Goldfinch",
@@ -112,7 +112,10 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
     console.log("Transaction completed by " + details.payer.name.given_name);
     setShowPaymentModal(true);
     setTimeout(()=> {
-      router.push("/components/paid",)
+      router.push("/components/paid",
+        
+      )
+      
     }, 4000)
   });
 };

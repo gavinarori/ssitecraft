@@ -156,6 +156,7 @@ const Collections = () => {
               <a href="#" className="text-sm font-semibold leading-6 text-white">
                 Learn more <span aria-hidden="true">→</span>
               </a>
+              <div className="absolute w-full bottom-0 inset-x-0 h-16 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
             </div>
           </div>
           <div className="relative mt-16 h-80 lg:mt-8">
@@ -166,6 +167,7 @@ const Collections = () => {
               height={1080}
               className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
             />
+            
           </div>
         </div>
       </div>
