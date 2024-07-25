@@ -1,11 +1,15 @@
 import OrbitingCircles from "@/app/components/ui/avatar-circles";
+
+import { cn } from "@/utils/cn";
+import GridPattern from "@/app/components/ui/grid";
+import DotPattern from "@/app/components/ui/dot";
  
 
 const PaidProducts = () =>{
     return(
         <div className="py-16">
   <div className="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-16">
-    <div className="lg:bg-gray-50 dark:lg:bg-darker lg:p-16 rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center">
+    <div className=" dark:lg:bg-darker lg:p-16 rounded-[4rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center">
       <div className="md:5/12 lg:w-1/2">
         <img
           src="images/pie.svg"
@@ -46,6 +50,23 @@ const PaidProducts = () =>{
       </div>
     </div>
   </div>
+  <GridPattern
+        squares={[
+          [4, 4],
+          [5, 1],
+          [8, 2],
+          [5, 3],
+          [5, 5],
+          [10, 10],
+          [12, 15],
+          [15, 10],
+          [10, 15],
+        ]}
+        className={cn(
+          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+        )}
+      />
   <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background ">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         Tech stack
@@ -87,6 +108,50 @@ const PaidProducts = () =>{
       >
         <Icons.gitHub />
       </OrbitingCircles>
+    </div>
+
+    <div className="bg-white">
+      <div className="mx-auto max-w-7xl py-16 sm:px-6 sm:py-32 lg:px-8">
+        <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+         
+      <DotPattern
+        className={cn(
+          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
+        )}
+      />
+          <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Boost your productivity.
+              <br />
+              Start using our app today.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+              <a
+                href="#"
+                className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Get started
+              </a>
+              <a href="#" className="text-sm font-semibold leading-6 text-white">
+                Learn more <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <div className="relative mt-16 h-80 lg:mt-8">
+            <img
+              alt="App screenshot"
+              src="https://www.yola.com/ws/media-library/0fd888763f614591a6901345dfc2c7a9/graphic-design-website-template.png"
+              width={1824}
+              height={1080}
+              className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+            />
+          </div>
+        </div>
+      </div>
+      
     </div>
 </div>
          
