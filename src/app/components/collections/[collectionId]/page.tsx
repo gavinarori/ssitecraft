@@ -8,8 +8,7 @@ import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Marquee from "@/app/components/ui/marquee";
 import { usePaymentModal } from '@/app/components/ui/successful';
 import { useRouter } from 'next/navigation';
-
-export const products = [
+ const products = [
   {
     id: 1,
     title: "Goldfinch",
