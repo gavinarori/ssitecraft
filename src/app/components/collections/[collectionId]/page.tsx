@@ -112,7 +112,7 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
     console.log("Transaction completed by " + details.payer.name.given_name);
     setShowPaymentModal(true);
     setTimeout(()=> {
-      router.push("/components/paid")
+      router.push("/components/paid",)
     }, 4000)
   });
 };
