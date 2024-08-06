@@ -8,55 +8,101 @@ import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Marquee from "@/app/components/ui/marquee";
 import { usePaymentModal } from '@/app/components/ui/successful';
 import { useRouter } from 'next/navigation';
- const products = [
+ 
+
+const products = [
   {
     id: 1,
-    title: "Goldfinch",
-    price: 20000,
-    imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea7_goldfinch-thumb.webp"
+    title: "Soleworthy",
+    price: 40,
+    websiteLink:"https://modern-e-commerce-website-gray.vercel.app/",
+    imgSrc: {
+      light: [
+        "/soleworthy/light_1.png",
+        "/soleworthy/dark_1.png",
+        "/soleworthy/dark_2.png",
+        "/soleworthy/dark_3.png",
+        "/soleworthy/dark_4.png",
+      ],
+      dark: [
+       
+      ]
+    }
   },
   {
     id: 2,
     title: "content creators website",
+    websiteLink:"",
     price: 0,
-    imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea5_Course%20Template.webp"
+    imgSrc: {
+      light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea5_Course%20Template.webp"],
+      dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea5_Course%20Template.webp"]
+    }
   },
   {
     id: 3,
-    title: "Lumio Homepage",
-    price: 20000,
-    imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea3_Lumio%20Homepage.webp"
+    title: "Fitness website",
+    websiteLink:"https://thefitsite.pages.dev/",
+    price: 45,
+    imgSrc: {
+      light: [
+        "/fitness/fit_1.jpeg",
+        "/fitness/fit_2.jpeg",
+        "/fitness/fit_3.jpeg",
+        "/fitness/fit_4.jpeg",
+      ],
+      dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea3_Lumio%20Homepage.webp"]
+    }
   },
   {
     id: 4,
     title: "food catering",
+    websiteLink:"https://food-catering-kappa.vercel.app/",
     price: 24,
-    imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/663904668f8979077697f0fd_Untitled%20design%20(1).png"
+    imgSrc: {
+      light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/663904668f8979077697f0fd_Untitled%20design%20(1).png"],
+      dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/663904668f8979077697f0fd_Untitled%20design%20(1).png"]
+    }
   },
   {
     id: 5,
     title: "Deadfellaz Website",
+    websiteLink:"",
     price: 0,
-    imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e8a_Frame%2036-min.png"
+    imgSrc: {
+      light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e8a_Frame%2036-min.png"],
+      dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e8a_Frame%2036-min.png"]
+    }
   },
   {
     id: 6,
     title: "creators Homepage",
-    price: 5000,
-    imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6638fc5db95cf1175bd394ef_Untitled%20design.png"
-  }
-  ,
+    websiteLink:"https://yodora-jade.vercel.app/",
+    price: 20,
+    imgSrc: {
+      light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6638fc5db95cf1175bd394ef_Untitled%20design.png"],
+      dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6638fc5db95cf1175bd394ef_Untitled%20design.png"]
+    }
+  },
   {
     id: 7,
     title: "Warbler Labs",
+    websiteLink:"",
     price: 20000,
-    imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e66_Warbler.png"
+    imgSrc: {
+      light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e66_Warbler.png"],
+      dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e66_Warbler.png"]
+    }
   },
   {
     id: 8,
     title: "Planto",
+    websiteLink:"",
     price: 0,
-    imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6639fcdbca63788dd58cfa85_Untitled%20design%20(2).png"
+    imgSrc: {
+      light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6639fcdbca63788dd58cfa85_Untitled%20design%20(2).png"],
+      dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6639fcdbca63788dd58cfa85_Untitled%20design%20(2).png"]
+    }
   }
 ];
 
@@ -69,12 +115,13 @@ import { useRouter } from 'next/navigation';
       className="flex flex-col gap-2 group relative overflow-hidden cursor-pointer"
     >
       <img
-        src={product.imgSrc}
+        src={product.imgSrc.light[0]}
         alt={product.title}
         width={500}
         height={300}
         className="size-full object-cover max-h-[300px] rounded-xl"
       />
+
 
       <div className="flex flex-col">
         <div className="group inline-flex cursor-pointer items-center justify-start gap-1 duration-200 hover:text-neutral-700 dark:hover:text-neutral-200 text-xl font-semibold text-neutral-700 dark:text-neutral-300">
@@ -91,6 +138,7 @@ import { useRouter } from 'next/navigation';
 const ProductDetails = ({ params }:any) => {
   const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(true);
   const { PaymentModal, setShowPaymentModal } = usePaymentModal();
+  const [currentImage, setCurrentImage] = useState(0);
   const router = useRouter();
    
   const paypalCreateOrder = async (data: any, actions: any) => {
@@ -132,7 +180,9 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
   <div className="xl:w-2/6 lg:w-2/5 w-80 md:block ">
   <div className="flex flex-wrap gap-6 pb-3">
             <a
-              href=""
+              href={`${product.websiteLink}`}
+               target="_blank"
+               rel="noopener noreferrer"
               className="relative flex bg-slate-800 h-12 w-full items-center rounded-full justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
             >
               <span className="relative text-base font-semibold text-white "
@@ -148,12 +198,22 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
               
           </a>
         </div>
-    <img className="w-full h-auto rounded-lg" alt="image of a girl posing" src={product.imgSrc} />
+    <img className="w-full h-auto rounded-lg" alt="image of a girl posing"  src={product.imgSrc.light[currentImage]} />
+    <div className="flex mt-4 gap-2">
+          {product.imgSrc.light.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Thumbnail ${index + 1}`}
+              className={`w-20 h-20 object-cover rounded-lg cursor-pointer ${currentImage === index ? 'border-2 border-primary' : ''}`}
+              onClick={() => setCurrentImage(index)}
+            />
+          ))}
+        </div>
   </div>
 
   <div className="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-20">
     <div className="border-b border-gray-200 pb-6">
-      <p className="text-sm leading-none text-gray-600 dark:text-gray-300 ">Balenciaga Fall Collection</p>
       <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">{product.title}</h1>
     </div>
     
