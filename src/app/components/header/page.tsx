@@ -31,6 +31,7 @@ import {
 } from "../ui/animated-modal";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Badge } from "@/app/components/ui/badge"
 
 
 
@@ -73,7 +74,7 @@ export default function Example() {
           
 
           <a href="/components/collections" className="text-sm font-semibold text-blue-600 leading-6 ">
-          Templates
+          Templates <Badge className="bg-red-500  text-white" variant="outline">New</Badge>
           </a>
           
         </PopoverGroup>
@@ -199,7 +200,7 @@ export default function Example() {
                   href="/components/collections"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Templates
+                  Templates <Badge className="bg-red-500  text-white" variant="outline">New</Badge>
                 </a>
                 
               </div>
