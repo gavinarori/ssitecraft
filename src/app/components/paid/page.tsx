@@ -1,5 +1,4 @@
 import OrbitingCircles from "@/app/components/ui/avatar-circles";
-import { useRouter } from 'next/router';
 import { cn } from "@/utils/cn";
 import GridPattern from "@/app/components/ui/grid";
 import DotPattern from "@/app/components/ui/dot";
