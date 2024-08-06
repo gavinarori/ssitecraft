@@ -1,13 +1,15 @@
 import DotPattern from "@/app/components/ui/dot";
 import { cn } from "@/utils/cn";
+import { Badge } from "@/app/components/ui/badge"
+
 
 const Collections = () => {
   const products = [
     {
       id: 1,
-      title: "Goldfinch",
-      price: "$20,000",
-      imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea7_goldfinch-thumb.webp"
+      title: "Soleworthy",
+      price: "$30",
+      imgSrc: "/soleworthy/light_1.png"
     },
     {
       id: 2,
@@ -17,14 +19,14 @@ const Collections = () => {
     },
     {
       id: 3,
-      title: "Lumio Homepage",
-      price: "$20,000",
-      imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea3_Lumio%20Homepage.webp"
+      title: "Fitness website",
+      price: "$45",
+      imgSrc: "/fitness/fit_1.jpeg"
     },
     {
       id: 4,
       title: "food catering",
-      price: "£24.00 GBP",
+      price: "$24",
       imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/663904668f8979077697f0fd_Untitled%20design%20(1).png"
     },
     {
@@ -36,7 +38,7 @@ const Collections = () => {
     {
       id: 6,
       title: "creators Homepage",
-      price: "$5000",
+      price: "$20",
       imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6638fc5db95cf1175bd394ef_Untitled%20design.png"
     }
     ,
@@ -115,9 +117,10 @@ const Collections = () => {
                   className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
                 />
                 <div className="relative bg-white pt-3">
-                  <h3 className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
-                    {product.title}
-                  </h3>
+                  <h3 className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4 ">
+                    {product.title} 
+                    {(product.id === 1 || product.id === 3) && <Badge className="bg-red-500 ml-2 text-white" variant="outline">New</Badge>}
+                    </h3>
                   <p className="mt-2">
                     <span className="sr-only">Regular Price</span>
                     <span className="tracking-wider text-gray-900">{product.price}</span>
