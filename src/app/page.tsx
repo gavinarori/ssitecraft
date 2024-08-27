@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Announcement from '@/app/components/Announcement/page'
 import  Landing  from "./components/landing/page";
 import  Services  from "./components/services/page";
