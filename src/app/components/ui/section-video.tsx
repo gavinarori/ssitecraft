@@ -1,6 +1,6 @@
-"use client";
-
+"use client"
 import { Button } from "./Button";
+import Image from "next/image";
 import { useMediaQuery } from "@/utils/use-media-query";
 import { Icons } from "@/lib/Icons";
 import { motion } from "framer-motion";
@@ -31,7 +31,7 @@ export function SectionVideo() {
 
     return (
         <motion.div
-            className="flex flex-col justify-center md:container md:ml-24 pb-20"
+            className="flex flex-col justify-center md:container  pb-20"
             onViewportEnter={() => {
                 if (!isPlaying && isDesktop) {
                     timer.current = setTimeout(() => {
@@ -78,10 +78,10 @@ export function SectionVideo() {
                     url="/sitecraft.mp4"
                     playing={isPlaying}
                     muted={isMuted}
-                    width="100%"
+                    width="auto"
                     height="auto"
                     className="rounded-xl"
-                    light={<img src="/banner.png" alt="Banner" className="w-full h-full object-cover rounded-xl" />}
+                    light={<img src="/banner.png" alt="Banner" className="w-auto h-full object-cover rounded-xl" />}
                     onClick={togglePlay}
                     onEnded={() => playerRef.current?.seekTo(0)}
                 />
