@@ -30,7 +30,7 @@ export function SectionVideo() {
 
     return (
         <motion.div
-            className="flex flex-col justify-center md:container ml-11  pb-20"
+            className="flex flex-col justify-center md:container ml-4  pb-20"
             onViewportEnter={() => {
                 if (!isPlaying && isDesktop) {
                     timer.current = setTimeout(() => {
