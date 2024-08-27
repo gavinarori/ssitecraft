@@ -5,6 +5,8 @@ import { FlipWords } from "../ui/flip-words";
 import { Button } from "../ui/moving-border";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "../ui/hero-highlight";
+import GridPattern from "@/app/components/ui/grid";
+import { cn } from "@/utils/cn";
  
 const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
   ssr: false,
@@ -404,7 +406,9 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
   <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6  lg:px-8 lg:py-16">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
       <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
-      <World data={sampleArcs} globeConfig={globeConfig} />
+
+        <World data={sampleArcs} globeConfig={globeConfig} />
+        
       <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
       </div>
 
@@ -420,7 +424,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
         <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
         Unlock the Full Potential of Your Business with Custom Web Applications: Our team of skilled developers will work with you to design and build a tailored web application that meets your unique needs and goals, helping you stay ahead of the competition.
         </p>
-
+        
         <div className="py-12">
       <Button
         borderRadius="1.75rem"
