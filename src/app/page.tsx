@@ -6,7 +6,7 @@ import  Footer  from "./components/Footer/page";
 import  InfiniteMovingCardsDemo  from "./components/Testimonial/page"; 
 import  {MacbookScrollDemo} from "./components/Stats";
 import  Extra  from "./components/Extra";
-import  FAQs  from "./components/FAQs";
+import { SectionVideo } from "./components/ui/section-video";
 import Pricing from "./components/pricing";
 import { HeroScrollDemo } from "./components/containerScroll";
 import { HeroParallaxDemo } from "./components/templates";
@@ -21,6 +21,7 @@ export default function Home() {
       <Extra /> 
       <HeroScrollDemo />
       <HeroParallaxDemo/>
+      <SectionVideo/>
       <Pricing />
       <InfiniteMovingCardsDemo />
       <Footer />
