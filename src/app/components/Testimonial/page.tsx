@@ -35,8 +35,6 @@ const reviews = [
 ];
 
 const firstRow = reviews.slice(0, Math.ceil(reviews.length / 2));
-const secondRow = reviews.slice(Math.ceil(reviews.length / 2));
-
 const ReviewCard = ({
   name,
   title,
@@ -65,7 +63,7 @@ const ReviewCard = ({
   );
 };
 
-export function MarqueeDemoVertical() {
+ function MarqueeDemoVertical() {
   return (
     <div className="relative flex h-[500px] w-full  flex-col overflow-hidden rounded-lg border bg-background ">
        <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">
@@ -82,9 +80,9 @@ export function MarqueeDemoVertical() {
           ))}
         </div>
       </Marquee>
-     
-      
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
     </div>
   );
 }
+
+export default MarqueeDemoVertical;
