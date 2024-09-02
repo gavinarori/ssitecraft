@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { HeroParallax } from "../components/ui/hero-parallax";
-import { motion } from "framer-motion";
+import DotPattern from "@/app/components/ui/dot";
 import BlurFade from "@/app/components/ui/blur-fade";
+import { cn } from "@/utils/cn";
 
 // Product data
 const products = [
@@ -65,7 +65,7 @@ function HeroParallaxWithBlurFade() {
 
         {/* Image Gallery with BlurFade */}
         <section id="photos" className="mt-12">
-          <div className="columns-2 gap-4 sm:columns-3">
+          <div className="columns-2 gap-4 sm:columns-3"> 
             {products.map((product, idx) => (
               <BlurFade key={product.id} delay={0.5 + idx * 0.05} inView>
                 <img
