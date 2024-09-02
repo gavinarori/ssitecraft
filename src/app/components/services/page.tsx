@@ -38,8 +38,8 @@ const Services: React.FC = () => {
     return (
         <div className="py-16">
             <div className="mx-auto max-w-lg text-center mb-10">
-                <h1 className="text-2xl font-bold sm:text-3xl">Our Services</h1>
-                <p className="mt-4 text-gray-500">Get noticed, get found, and get ahead with our expert services!</p>
+                <h1 className="mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">Our Services</h1>
+                <p className="mx-auto mb-8 max-w-lg  text-lg font-medium tracking-tight text-foreground/80">Get noticed, get found, and get ahead with our expert services!</p>
             </div>
             <div className="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
                 <div className="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-3">

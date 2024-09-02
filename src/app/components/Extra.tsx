@@ -9,11 +9,11 @@ const Extra = () => {
   return (
     <div className="relative  lg:pt-44">
       <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-      <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-black/50 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl pb-3">Schedule a Call with Us Today!
+      <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-foreground text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl pb-3">Schedule a Call with Us Today!
       </h1>
         <div className="lg:flex">
           <div className="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
-            <p className="sm:text-lg text-gray-700 lg:w-11/12">
+            <p className="sm:text-lg text-foreground/80 lg:w-11/12">
             Are you ready to take the next step and discuss how we can help you achieve your goals? We'd love to schedule a call with you to explore how our services can benefit your business.
             </p>
             <span className="block font-semibold text-gray-500">
