@@ -2,8 +2,8 @@ const Pricing = () => {
     return (
         <div className="max-w-screen-xl  px-8 py-4 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
             <div className="mx-auto max-w-lg text-center mb-10">
-                <h1 className="text-2xl font-bold sm:text-3xl">Our Packages</h1>
-                <p className="mt-4 text-gray-500">
+                <h1 className="mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">Our Packages</h1>
+                <p className="mx-auto mb-8 max-w-lg text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
                     Choose a package that best suits your needs and enjoy a range of features designed to help you succeed online.
                 </p>
             </div>
