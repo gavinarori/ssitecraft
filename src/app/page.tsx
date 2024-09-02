@@ -3,7 +3,7 @@ import Announcement from '@/app/components/Announcement/page'
 import  Landing  from "./components/landing/page";
 import  Services  from "./components/services/page";
 import  Footer  from "./components/Footer/page";
-import  InfiniteMovingCardsDemo  from "./components/Testimonial/page"; 
+import { MarqueeDemoVertical } from './components/Testimonial/page';
 import  {MacbookScrollDemo} from "./components/Stats";
 import  Extra  from "./components/Extra";
 import { SectionVideo } from "./components/ui/section-video";
@@ -23,7 +23,7 @@ export default function Home() {
       <HeroParallaxDemo/>
       <SectionVideo/>
       <Pricing />
-      <InfiniteMovingCardsDemo />
+      <MarqueeDemoVertical />
       <Footer />
      
     </main>
