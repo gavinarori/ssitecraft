@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "weTogether",
+  title: "siteCraft",
   description: "Unlock the Full Potential of Your Business with Custom Web Applications",
 };
 

@@ -153,7 +153,7 @@ const Footer = () =>{
 
         <li>
           <a
-            href="#"
+            href="https://github.com/gavinarori/ssitecraft"
             rel="noreferrer"
             target="_blank"
             className=" transition "
