@@ -6,7 +6,7 @@ import  Footer  from "./components/Footer/page";
 import  MarqueeDemoVertical from './components/Testimonial/page';
 import  {MacbookScrollDemo} from "./components/Stats";
 import  Extra  from "./components/Extra";
-import { SectionVideo } from "./components/ui/section-video";
+import HeroVideoDialogDemo from "./components/ui/section-video";
 import Pricing from "./components/pricing";
 import { HeroScrollDemo } from "./components/containerScroll";
 import HeroParallaxWithBlurFade  from "./components/templates";
@@ -22,7 +22,7 @@ export default function Home() {
       <Extra /> 
       <HeroScrollDemo />
       <HeroParallaxWithBlurFade/>
-      <SectionVideo/>
+      <HeroVideoDialogDemo/>
       <Pricing />
       <MarqueeDemoVertical />
       <Footer />
