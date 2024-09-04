@@ -6,7 +6,6 @@ import axios from 'axios';
 import Link from "next/link";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Marquee from "@/app/components/ui/marquee";
-import { usePaymentModal } from '@/app/components/ui/successful';
 import { useRouter } from 'next/navigation';
  
 
@@ -136,8 +135,6 @@ const products = [
 
 
 const ProductDetails = ({ params }:any) => {
-  const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(true);
-  const { PaymentModal, setShowPaymentModal } = usePaymentModal();
   const [currentImage, setCurrentImage] = useState(0);
   const router = useRouter();
    
@@ -157,13 +154,7 @@ const ProductDetails = ({ params }:any) => {
 const paypalCaptureOrder = async (data: any, actions: any) => {
   return actions.order.capture().then(function (details: any) {
     console.log("Transaction completed by " + details.payer.name.given_name);
-    setShowPaymentModal(true);
-    setTimeout(()=> {
-      router.push("/components/paid",
-        
-      )
-      
-    }, 4000)
+    
   });
 };
 
@@ -176,7 +167,6 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
   return (
     <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4 max-w-screen ">
 
-<PaymentModal/>
   <div className="xl:w-2/6 lg:w-2/5 w-80 md:block ">
   <div className="flex flex-wrap gap-6 pb-3">
             <a
