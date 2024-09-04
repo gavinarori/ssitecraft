@@ -1,8 +1,9 @@
 "use client"
 
-import { useState } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { MultiStepLoader as Loader } from "@/app/components/ui/multi-step-loader";
+import { IconSquareRoundedX } from "@tabler/icons-react";
 import Link from "next/link";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Marquee from "@/app/components/ui/marquee";
@@ -105,6 +106,18 @@ const products = [
   }
 ];
 
+const loadingStates = [
+  { text: "Initializing payment" },
+  { text: "Verifying payment details" },
+  { text: "Processing transaction" },
+  { text: "Contacting payment gateway" },
+  { text: "Awaiting confirmation" },
+  { text: "Transaction approved" },
+  { text: "Generating receipt" },
+  { text: "Payment successful" },
+  { text: "Happy Coding !" },
+];
+
 
 
  function ShowcaseCard({ product }:any) {
@@ -136,7 +149,20 @@ const products = [
 
 const ProductDetails = ({ params }:any) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    if (loading) {
+      const totalDuration = loadingStates.length * 2000; 
+      const timer = setTimeout(() => {
+        setLoading(false);
+        router.push("/components/paid"); 
+      }, totalDuration);
+
+      return () => clearTimeout(timer);
+    }
+  }, [loading, router]);
    
   const paypalCreateOrder = async (data: any, actions: any) => {
     return actions.order.create({
@@ -154,7 +180,7 @@ const ProductDetails = ({ params }:any) => {
 const paypalCaptureOrder = async (data: any, actions: any) => {
   return actions.order.capture().then(function (details: any) {
     console.log("Transaction completed by " + details.payer.name.given_name);
-    
+    setLoading(true);
   });
 };
 
@@ -251,6 +277,20 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
         <div className="pointer-events-none absolute inset-y-0 right-0 h-full  w-1/12 bg-gradient-to-l from-background"></div>
       </div>
   </div>
+
+
+      {/* Multi-Step Loader */}
+      <Loader loadingStates={loadingStates} loading={loading} duration={2000} />
+
+      {/* Optional: Add a close button for the loader */}
+      {loading && (
+        <button
+          className="fixed top-4 right-4 text-black dark:text-white z-[120]"
+          onClick={() => setLoading(false)}
+        >
+          <IconSquareRoundedX className="h-10 w-10" />
+        </button>
+      )}
 </div>
   );
 };
