@@ -8,6 +8,18 @@ import Link from "next/link";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Marquee from "@/app/components/ui/marquee";
 import { useRouter } from 'next/navigation';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/app/components/ui/dialog"
+import { useRef } from "react";
+import type { ConfettiRef } from "@/app/components/ui/confetti";
+import Confetti from "@/app/components/ui/confetti";
  
 
 const products = [
@@ -148,8 +160,11 @@ const loadingStates = [
 
 
 const ProductDetails = ({ params }:any) => {
+  const confettiRef = useRef<ConfettiRef>(null);
   const [currentImage, setCurrentImage] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [paidProductImage, setPaidProductImage] = useState<any>();
+  const [dialogOpen, setDialogOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -157,7 +172,7 @@ const ProductDetails = ({ params }:any) => {
       const totalDuration = loadingStates.length * 2000; 
       const timer = setTimeout(() => {
         setLoading(false);
-        router.push("/components/paid"); 
+        setDialogOpen(true);  
       }, totalDuration);
 
       return () => clearTimeout(timer);
@@ -181,6 +196,15 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
   return actions.order.capture().then(function (details: any) {
     console.log("Transaction completed by " + details.payer.name.given_name);
     setLoading(true);
+    const paidProductId = product?.id
+    const paidProduct = products.find(product => product.id === paidProductId);
+
+    if (paidProduct) {
+      setLoading(true);
+      setPaidProductImage(paidProduct.imgSrc.light[0]); 
+    } else {
+      console.error("Product not found");
+    }
   });
 };
 
@@ -291,6 +315,36 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
           <IconSquareRoundedX className="h-10 w-10" />
         </button>
       )}
+
+<Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogContent className="sm:max-w-[425px] z-[100]">
+          <DialogHeader>
+            <DialogTitle>Download Files</DialogTitle>
+          </DialogHeader>
+          
+          
+      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      <div className="grid gap-4 py-4">
+            <img
+              src={paidProductImage}
+              alt="Paid Product"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+        Confetti
+      </span>
+     
+      <Confetti
+        ref={confettiRef}
+        className="absolute left-0 top-0 z-0 size-full"
+        onMouseEnter={() => {
+          confettiRef.current?.fire({});
+        }}
+      />
+    </div>
+        </DialogContent>
+      </Dialog>
 </div>
   );
 };
