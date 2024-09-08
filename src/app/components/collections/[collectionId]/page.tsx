@@ -21,7 +21,8 @@ import { useRef } from "react";
 import OrbitingCircles from "@/app/components/ui/avatar-circles";
 import type { ConfettiRef } from "@/app/components/ui/confetti";
 import Confetti from "@/app/components/ui/confetti";
-import { Button } from "@/app/components/ui/Button";
+import { useToast } from "@/app/components/ui/use-toast"
+
  
 
 const products = [
@@ -73,7 +74,7 @@ const products = [
     id: 4,
     title: "Deadfellaz Website",
     websiteLink:"",
-    price: 0,
+    price: 34,
     imgSrc: {
       light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e8a_Frame%2036-min.png"],
       dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e8a_Frame%2036-min.png"]
@@ -159,6 +160,7 @@ const ProductDetails = ({ params }:any) => {
   const [paidProductImage, setPaidProductImage] = useState<any>();
   const [dialogOpen, setDialogOpen] = useState(false);
   const router = useRouter();
+  const { toast } = useToast()
 
   useEffect(() => {
     if (loading) {
@@ -324,13 +326,29 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
               className="w-full h-auto rounded-lg"
             />
           </div>
-          <a
-              href={``}
+          <div className='flex flex-wrap gap-6 pb-3'>
+          <button
+              onClick={() => {
+                toast({
+                  title: "Scheduled: Catch up",
+                  description: "Friday, February 10, 2023 at 5:57 PM",
+                })
+              }}
+
               className="relative flex cursor-pointer bg-slate-200 h-8 mb-4 w-full items-center rounded-full justify-start px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
             >
               <span className="relative text-base font-semibold text-foreground mr-2 ">download files</span>
                 <Icons.download />
-            </a>
+            </button>
+            <button
+              
+
+              className="relative flex cursor-pointer bg-slate-200 h-8 mb-4 w-full items-center rounded-full justify-start px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+            >
+              <span className="relative text-base font-semibold text-foreground mr-2 ">Guide</span>
+                <Icons.guide />
+            </button>
+          </div>
           <div className="relative flex h-auto w-auto  flex-col items-center justify-center overflow-hidden rounded-lg border bg-background ">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         Tech stack
@@ -431,6 +449,13 @@ const Icons = {
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
 </svg>
+
+),
+guide: () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+</svg>
+
 
 ),
 };

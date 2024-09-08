@@ -13,43 +13,37 @@ const Collections = () => {
     },
     {
       id: 2,
-      title: "content creators website",
-      price: "Personal time",
-      imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0ea5_Course%20Template.webp"
-    },
-    {
-      id: 3,
       title: "Fitness website",
       price: "$45",
       imgSrc: "/fitness/fit_1.jpeg"
     },
     {
-      id: 4,
+      id: 3,
       title: "food catering",
       price: "$24",
       imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/663904668f8979077697f0fd_Untitled%20design%20(1).png"
     },
     {
-      id: 5,
+      id: 4,
       title: "Deadfellaz Website",
       price: "private",
       imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e8a_Frame%2036-min.png"
     },
     {
-      id: 6,
+      id: 5,
       title: "creators Homepage",
       price: "$20",
       imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6638fc5db95cf1175bd394ef_Untitled%20design.png"
     }
     ,
     {
-      id: 7,
+      id: 6,
       title: "Warbler Labs",
       price: "$20,000",
       imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e66_Warbler.png"
     },
     {
-      id: 8,
+      id: 7,
       title: "Planto",
       price: "private",
       imgSrc: "https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6639fcdbca63788dd58cfa85_Untitled%20design%20(2).png"
