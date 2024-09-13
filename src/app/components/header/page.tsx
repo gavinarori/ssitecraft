@@ -66,9 +66,12 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex gap-x-1">
           
+        <a href="" className="text-sm font-semibold text-blue-600 leading-6 mr-2">
+          Component packs <Badge className="bg-foreground  text-black" variant="outline">coming soon..</Badge>
+          </a>
 
           <a href="/components/collections" className="text-sm font-semibold text-blue-600 leading-6 ">
-          Templates <Badge className="bg-red-500  text-white" variant="outline">New</Badge>
+          Templates 
           </a>
           
         </PopoverGroup>
@@ -190,12 +193,16 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+
+              <a href="" className="text-sm font-semibold text-blue-600 leading-6 ">
+          Component packs <Badge className="bg-foreground  text-black" variant="outline">coming soon..</Badge>
+          </a>
                 
                 <a
                   href="/components/collections"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Templates <Badge className="bg-red-500  text-white" variant="outline">New</Badge>
+                  Templates 
                 </a>
                 
               </div>
