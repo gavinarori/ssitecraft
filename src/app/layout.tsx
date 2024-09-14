@@ -24,9 +24,9 @@ export default function RootLayout({
         <GoogleTagManager containerId='GTM-K7WZZHMQ' />
       </head>
       <body className={inter.className}>
+      <Toaster />
       <Header />
         {children}
-        <Toaster />
         </body>
     </html>
   );
