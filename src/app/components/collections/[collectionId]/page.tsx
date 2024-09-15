@@ -1,7 +1,16 @@
 "use client"
 
-import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'
-import React, { useEffect, useState } from "react";
+import { 
+  PayPalScriptProvider,
+  PayPalButtons 
+} from '@paypal/react-paypal-js'
+import 
+React,
+ { 
+  useEffect, 
+  useState ,
+  useRef
+} from "react";
 import { MultiStepLoader as Loader } from "@/app/components/ui/multi-step-loader";
 import { IconSquareRoundedX } from "@tabler/icons-react";
 import Link from "next/link";
@@ -11,17 +20,14 @@ import { useRouter } from 'next/navigation';
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/app/components/ui/dialog"
-import { useRef } from "react";
 import OrbitingCircles from "@/app/components/ui/avatar-circles";
 import type { ConfettiRef } from "@/app/components/ui/confetti";
 import Confetti from "@/app/components/ui/confetti";
 import { useToast } from "@/app/components/ui/use-toast"
+import RepoDownload from '../../repo-download';
 
  
 
@@ -31,6 +37,8 @@ const products = [
     title: "Soleworthy",
     price: 40,
     websiteLink:"https://modern-e-commerce-website-gray.vercel.app/",
+    repo: "soleworthy-repo",
+    owner: "soleworthy-owner",
     imgSrc: {
       light: [
         "/soleworthy/light_1.png",
@@ -50,6 +58,8 @@ const products = [
     title: "Fitness website",
     websiteLink:"https://thefitsite.pages.dev/",
     price: 45,
+    repo: "soleworthy-repo",
+    owner: "soleworthy-owner",
     imgSrc: {
       light: [
         "/fitness/fit_1.jpeg",
@@ -64,6 +74,8 @@ const products = [
     id: 3,
     title: "food catering",
     websiteLink:"https://food-catering-kappa.vercel.app/",
+    repo: "soleworthy-repo",
+    owner: "soleworthy-owner",
     price: 24,
     imgSrc: {
       light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/663904668f8979077697f0fd_Untitled%20design%20(1).png"],
@@ -74,6 +86,8 @@ const products = [
     id: 4,
     title: "Deadfellaz Website",
     websiteLink:"",
+    repo: "soleworthy-repo",
+    owner: "soleworthy-owner",
     price: 34,
     imgSrc: {
       light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e8a_Frame%2036-min.png"],
@@ -85,6 +99,8 @@ const products = [
     title: "creators Homepage",
     websiteLink:"https://yodora-jade.vercel.app/",
     price: 20,
+    repo: "soleworthy-repo",
+    owner: "soleworthy-owner",
     imgSrc: {
       light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6638fc5db95cf1175bd394ef_Untitled%20design.png"],
       dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6638fc5db95cf1175bd394ef_Untitled%20design.png"]
@@ -94,6 +110,8 @@ const products = [
     id: 6,
     title: "Warbler Labs",
     websiteLink:"",
+    repo: "soleworthy-repo",
+    owner: "soleworthy-owner",
     price: 20000,
     imgSrc: {
       light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6637f8a2ca48c8a9c81c0e66_Warbler.png"],
@@ -105,6 +123,9 @@ const products = [
     title: "Planto",
     websiteLink:"",
     price: 0,
+    free: true,
+    repo: "soleworthy-repo",
+    owner: "soleworthy-owner",
     imgSrc: {
       light: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6639fcdbca63788dd58cfa85_Untitled%20design%20(2).png"],
       dark: ["https://uploads-ssl.webflow.com/6637f8a2ca48c8a9c81c0dfe/6639fcdbca63788dd58cfa85_Untitled%20design%20(2).png"]
@@ -402,6 +423,8 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
     </div>
         </DialogContent>
       </Dialog>
+
+      <RepoDownload repo={product.repo} owner={product.owner} />
 </div>
   );
 };
