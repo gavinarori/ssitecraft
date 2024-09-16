@@ -27,9 +27,12 @@ import OrbitingCircles from "@/app/components/ui/avatar-circles";
 import type { ConfettiRef } from "@/app/components/ui/confetti";
 import Confetti from "@/app/components/ui/confetti";
 import { useToast } from "@/app/components/ui/use-toast"
-import RepoDownload from '../../repo-download';
+import { ArrowRightIcon, Download } from "lucide-react";
+import { Button, buttonVariants } from "@/app/components/ui/Button";
+import { cn } from "@/utils/cn";
 
- 
+
+
 
 const products = [
   {
@@ -37,8 +40,8 @@ const products = [
     title: "Soleworthy",
     price: 40,
     websiteLink:"https://modern-e-commerce-website-gray.vercel.app/",
-    repo: "soleworthy-repo",
-    owner: "soleworthy-owner",
+    repo: "modern-e-commerce-website",
+    owner: "gavinarori",
     imgSrc: {
       light: [
         "/soleworthy/light_1.png",
@@ -147,6 +150,9 @@ const loadingStates = [
 
 
 
+ 
+
+
  function ShowcaseCard({ product }:any) {
   return (
     <Link
@@ -181,19 +187,46 @@ const ProductDetails = ({ params }:any) => {
   const [paidProductImage, setPaidProductImage] = useState<any>();
   const [dialogOpen, setDialogOpen] = useState(false);
   const router = useRouter();
-  const { toast } = useToast()
+  const { toast } = useToast();
 
   useEffect(() => {
     if (loading) {
       const totalDuration = loadingStates.length * 2000; 
       const timer = setTimeout(() => {
         setLoading(false);
+        handleDownload ()
         setDialogOpen(true);  
       }, totalDuration);
 
       return () => clearTimeout(timer);
     }
   }, [loading, router]);
+
+  const handleDownload = async () => {
+    toast({
+      title: "Automatic Download started",
+      description: "Your download will begin shortly.",
+    });
+
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_APP_URL}/api/repo/download`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({  repo: product.repo, owner: product.owner }),
+        }
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      const downloadUrl = data.downloadUrl;
+      window.location.href = downloadUrl;
+    } catch (error) {
+      console.error("Error occurred while downloading. Please try again.", error);
+    } 
+  };
    
   const paypalCreateOrder = async (data: any, actions: any) => {
     return actions.order.create({
@@ -217,7 +250,7 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
 
     if (paidProduct) {
       setLoading(true);
-      setPaidProductImage(paidProduct.imgSrc.light[0]); 
+      setPaidProductImage(paidProduct.imgSrc.light[0]);
     } else {
       console.error("Product not found");
     }
@@ -229,6 +262,7 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
   const product = products.find(p => p.id === parseInt(collectionId));
   if (!product) return <p>Product not found</p>;
 
+  
   
   return (
     <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4 max-w-screen ">
@@ -244,15 +278,14 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
               <span className="relative text-base font-semibold text-white "
                 >Preview</span>
             </a>
-            <a
-              href=""
+            <button
               className="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
             >
               <span
                 className="relative text-base font-semibold text-primary dark:text-white"
                 >More about</span>
               
-          </a>
+          </button>
         </div>
     <img className="w-full h-auto rounded-lg" alt="image of a girl posing"  src={product.imgSrc.light[currentImage]} />
     <div className="flex mt-4 gap-2">
@@ -300,6 +333,8 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
                         onApprove={paypalCaptureOrder}
                     />
                 </PayPalScriptProvider>
+
+               
     <div>
       <div className="border-t border-b py-4 mt-7 border-gray-200">
         <div data-menu className="flex justify-between items-center cursor-pointer">
@@ -348,27 +383,12 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
             />
           </div>
           <div className='flex flex-wrap gap-6 pb-3'>
-          <button
-              onClick={() => {
-                toast({
-                  title: "Scheduled: Catch up",
-                  description: "Friday, February 10, 2023 at 5:57 PM",
-                })
-              }}
-
-              className="relative flex cursor-pointer bg-slate-200 h-8 mb-4 w-full items-center rounded-full justify-start px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-            >
-              <span className="relative text-base font-semibold text-foreground mr-2 ">download files</span>
-                <Icons.download />
-            </button>
-            <button
-              
-
+            <Button
               className="relative flex cursor-pointer bg-slate-200 h-8 mb-4 w-full items-center rounded-full justify-start px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
             >
               <span className="relative text-base font-semibold text-foreground mr-2 ">Guide</span>
                 <Icons.guide />
-            </button>
+            </Button>
           </div>
           <div className="relative flex h-auto w-auto  flex-col items-center justify-center overflow-hidden rounded-lg border bg-background ">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
@@ -423,8 +443,6 @@ const paypalCaptureOrder = async (data: any, actions: any) => {
     </div>
         </DialogContent>
       </Dialog>
-
-      <RepoDownload repo={product.repo} owner={product.owner} />
 </div>
   );
 };
