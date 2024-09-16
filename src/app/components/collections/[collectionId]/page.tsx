@@ -203,6 +203,15 @@ const ProductDetails = ({ params }:any) => {
   }, [loading, router]);
 
   const handleDownload = async () => {
+    if (!product) {
+      toast({
+        title: "Error Downloading",
+        description: "Product is undefined. Cannot start download",
+      });
+  
+      console.error("Product is undefined. Cannot start download.");
+      return;
+    }
     toast({
       title: "Automatic Download started",
       description: "Your download will begin shortly.",
