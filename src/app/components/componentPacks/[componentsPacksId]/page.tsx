@@ -1,12 +1,11 @@
 "use client";
 
 import { useRouter } from 'next/navigation';
-import { showCaseBlocks } from "../constants"; // Import your constants
+import { showCaseBlocks } from "../constants";
 
 const ProductDetail = ({ params }:any ) => {
   const { Id } = params;
 
-  // Find the product using the ID from the URL
   const product = showCaseBlocks.find(p => p.id === parseInt(Id));
   
   if (!product) return <p>Product not found</p>;
