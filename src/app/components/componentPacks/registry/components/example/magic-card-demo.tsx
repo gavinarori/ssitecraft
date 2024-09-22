@@ -1,9 +1,8 @@
-import { useTheme } from "next-themes";
 
 import { MagicCard } from "../magicui/magic-card"
 
 export default function MagicCardDemo() {
-  const { theme } = useTheme();
+
   return (
     <div
       className={
@@ -12,13 +11,13 @@ export default function MagicCardDemo() {
     >
       <MagicCard
         className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl"
-        gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
+        gradientColor="#262626" 
       >
         Magic
       </MagicCard>
       <MagicCard
         className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl"
-        gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
+        gradientColor="#262626" 
       >
         Card
       </MagicCard>

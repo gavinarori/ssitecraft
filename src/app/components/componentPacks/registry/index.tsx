@@ -6,17 +6,17 @@ const ui: Registry = {
   "magic-card": {
     name: "magic-card",
     type: "components:magicui",
-    files: ["registry/components/magicui/magic-card.tsx"],
+    files: ["app/components/componentPacks/registry/components/magicui/magic-card.tsx"],
   },
   "neon-gradient-card": {
     name: "neon-gradient-card",
     type: "components:magicui",
-    files: ["registry/components/magicui/neon-gradient-card.tsx"],
+    files: ["app/components/componentPacks/registry/components/magicui/neon-gradient-card.tsx"],
   },
   meteors: {
     name: "meteors",
     type: "components:magicui",
-    files: ["registry/components/magicui/meteors.tsx"],
+    files: ["app/components/componentPacks/registry/components/magicui/meteors.tsx"],
   },
 };
 
@@ -25,7 +25,7 @@ const example: Registry = {
     name: "magic-card-demo",
     type: "components:example",
     registryDependencies: ["magic-card"],
-    files: ["registry/components/example/magic-card-demo.tsx"],
+    files: ["app/components/componentPacks/registry/components/example/magic-card-demo.tsx"],
     component: React.lazy(
       () => import("@/app/components/componentPacks/registry/components/example/magic-card-demo"),
     ),
@@ -33,7 +33,7 @@ const example: Registry = {
   "neon-gradient-card-demo": {
     name: "neon-gradient-card-demo",
     type: "components:example",
-    files: ["registry/components/example/neon-gradient-card-demo.tsx"],
+    files: ["app/components/componentPacks/registry/components/example/neon-gradient-card-demo.tsx"],
     component: React.lazy(
       () => import("@/app/components/componentPacks/registry/components/example/neon-gradient-card-demo"),
     ),
@@ -42,7 +42,7 @@ const example: Registry = {
     name: "meteors-demo",
     type: "components:example",
     registryDependencies: ["meteors"],
-    files: ["registry/components/example/meteors-demo.tsx"],
+    files: ["app/components/componentPacks/registry/components/example/meteors-demo.tsx"],
     component: React.lazy(
       () => import("@/app/components/componentPacks/registry/components/example/meteors-demo"),
     ),
@@ -51,7 +51,7 @@ const example: Registry = {
     name: "grid-pattern-demo",
     type: "components:example",
     registryDependencies: ["grid-pattern"],
-    files: ["registry/components/example/grid-pattern-demo.tsx"],
+    files: ["app/components/componentPacks/registry/components/example/grid-pattern-demo.tsx"],
     component: React.lazy(
       () => import("@/app/components/componentPacks/registry/components/example/grid-pattern-demo"),
     ),
