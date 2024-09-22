@@ -1,28 +1,22 @@
 
-{/** 
+
   
   import Image from "next/image";
 import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
 import { Event } from "@/lib/events";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import RepoDownload from "@/components/repo-download";
-import TechStack from "@/components/tech-stack";
-import TemplatePreview from "@/components/template-preview";
-import TweetCard from "@/registry/components/magicui/tweet-card";
-
-import { ComponentInstallation } from "./component-installation";
+} from "@/app/components/ui/accordion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/components/ui/tabs";
 import { ComponentPreview } from "./component-preview";
 import { ComponentSource } from "./component-source";
-import { CopyButton, CopyNpmCommandButton } from "./copy-button";
+import { CopyButton } from "./copy-button";
 
 const CustomLink = (props: any) => {
   const href = props.href;
@@ -47,14 +41,10 @@ const components = {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-  TechStack,
-  RepoDownload,
-  TemplatePreview,
   Image,
-  Tweet: ({ id }: { id: string }) => <TweetCard id={id} className="mx-auto" />,
+
   ComponentPreview,
   ComponentSource: (props: any) => <ComponentSource {...props} />,
-  ComponentInstallation: (props: any) => <ComponentInstallation {...props} />,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
@@ -219,10 +209,6 @@ const components = {
   pre: ({
     className,
     __rawString__,
-    __npmCommand__,
-    __pnpmCommand__,
-    __yarnCommand__,
-    __bunCommand__,
     __withMeta__,
     __src__,
     __event__,
@@ -232,10 +218,6 @@ const components = {
   }: React.HTMLAttributes<HTMLPreElement> & {
     // __style__?: Style["name"]
     __rawString__?: string;
-    __npmCommand__?: string;
-    __pnpmCommand__?: string;
-    __yarnCommand__?: string;
-    __bunCommand__?: string;
     __withMeta__?: boolean;
     __src__?: string;
     __event__?: Event["name"];
@@ -258,20 +240,7 @@ const components = {
             className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
           />
         )}
-        {__npmCommand__ &&
-          __yarnCommand__ &&
-          __pnpmCommand__ &&
-          __bunCommand__ && (
-            <CopyNpmCommandButton
-              commands={{
-                __npmCommand__,
-                __pnpmCommand__,
-                __yarnCommand__,
-                __bunCommand__,
-              }}
-              className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
-            />
-          )}
+       
       </>
     );
   },
@@ -300,4 +269,4 @@ export function Mdx({ code, className }: MDXProps) {
     </article>
   );
 }
-  */}
+
