@@ -14,8 +14,7 @@ import HeroParallaxWithBlurFade  from "./components/templates";
 
 export default function Home() {
   return (
-    <main className=" ">
-      <Announcement />
+    <main className=" sm:w-full">
       <Landing />
       <MacbookScrollDemo />
       <Services />

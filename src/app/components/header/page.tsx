@@ -124,7 +124,7 @@ export default function Example() {
                 </motion.div>
               ))}
             </div>
-            <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
+            <div className="py-8 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
               <div className="flex  items-center justify-center">
                 <PlaneIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
@@ -157,7 +157,7 @@ export default function Example() {
               </div>
             </div>
           </ModalContent>
-          <ModalFooter className="gap-4">
+          <ModalFooter className="gap-2">
             
             <a href='https://forms.gle/bGaxqr7fvHddxxVi9' className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 text-center rounded-md border border-black w-28">
               Book Now
