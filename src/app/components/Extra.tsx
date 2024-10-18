@@ -104,29 +104,30 @@ const Extra = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg max-w-lg mx-auto">
-            <h2 className="text-2xl font-semibold mb-4">
-              Schedule a Meeting with {selectedPlatform}
-            </h2>
-            <div className="w-full h-80">
-              <iframe
-                src={`https://cal.com/gavin-code-arori-fmwfxa`}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allow="camera; microphone"
-              ></iframe>
-            </div>
-            <button
-              onClick={closeModal}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white p-4 sm:p-8 rounded-lg max-w-full sm:max-w-lg w-full mx-4 sm:mx-auto h-auto sm:h-auto overflow-y-auto">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+        Schedule a Meeting with {selectedPlatform}
+      </h2>
+      <div className="w-full h-64 sm:h-80">
+        <iframe
+          src={`https://cal.com/gavin-code-arori-fmwfxa`}
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          allow="camera; microphone"
+        ></iframe>
+      </div>
+      <button
+        onClick={closeModal}
+        className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };
