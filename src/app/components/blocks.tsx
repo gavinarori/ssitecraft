@@ -1,171 +1,102 @@
-"use client"
-import React from "react";
-import { cn } from "@/utils/cn";
-import Image from "next/image";
-import createGlobe from "cobe";
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { IconBrandYoutubeFilled } from "@tabler/icons-react";
-import Link from "next/link";
-
-export function FeaturesSectionDemo() {
-  const features = [
-    {
-      title: "Track issues effectively",
-      description:
-        "Track and manage your project issues with ease using our intuitive interface.",
-      skeleton: <SkeletonOne />,
-      className:
-        "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
-    },
-    {
-      title: "Deploy in seconds",
-      description:
-        "With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds.",
-      skeleton: <SkeletonFour />,
-      className: "col-span-1 lg:col-span-3 border-b lg:border-none",
-    },
-  ];
+export default function Blocks() {
   return (
-    <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
-      <div className="px-8">
-        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
-          Packed with thousands of features
-        </h4>
-
-        <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-          From Image generation to video generation, Everything AI has APIs for
-          literally everything. It can even create this website copy for you.
+    <div className="bg-gray-50 py-24 sm:py-32">
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <h2 className="text-center text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
+        <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
+          Everything you need to deploy your app
         </p>
-      </div>
-
-      <div className="relative ">
-        <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">
-          {features.map((feature) => (
-            <FeatureCard key={feature.title} className={feature.className}>
-              <FeatureTitle>{feature.title}</FeatureTitle>
-              <FeatureDescription>{feature.description}</FeatureDescription>
-              <div className=" h-full w-full">{feature.skeleton}</div>
-            </FeatureCard>
-          ))}
+        <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+          <div className="relative lg:row-span-2">
+            <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+              <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                  Mobile friendly
+                </p>
+                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                </p>
+              </div>
+              <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                  <img
+                    className="size-full object-cover object-top"
+                    src="https://tailwindui.com/plus/img/component-images/bento-03-mobile-friendly.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
+          </div>
+          <div className="relative max-lg:row-start-1">
+            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+              <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Performance</p>
+                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
+                </p>
+              </div>
+              <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
+                <img
+                  className="w-full max-lg:max-w-xs"
+                  src="https://tailwindui.com/plus/img/component-images/bento-03-performance.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
+          </div>
+          <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+            <div className="absolute inset-px rounded-lg bg-white"></div>
+            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+              <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
+                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
+                </p>
+              </div>
+              <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
+                <img
+                  className="h-[min(152px,40cqw)] object-cover object-center"
+                  src="https://tailwindui.com/plus/img/component-images/bento-03-security.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
+          </div>
+          <div className="relative lg:row-span-2">
+            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+              <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                  Powerful APIs
+                </p>
+                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
+                </p>
+              </div>
+              <div className="relative min-h-[30rem] w-full grow">
+                <div className="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
+                  <div className="flex bg-gray-800/40 ring-1 ring-white/5">
+                    <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
+                      <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
+                        NotificationSetting.jsx
+                      </div>
+                      <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
+                    </div>
+                  </div>
+                  <div className="px-6 pb-14 pt-6">{/* Your code example */}</div>
+                </div>
+              </div>
+            </div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+          </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
-
-const FeatureCard = ({
-  children,
-  className,
-}: {
-  children?: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <div className={cn(`p-4 sm:p-8 relative overflow-hidden`, className)}>
-      {children}
-    </div>
-  );
-};
-
-const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
-  return (
-    <p className=" max-w-5xl mx-auto text-left tracking-tight text-black dark:text-white text-xl md:text-2xl md:leading-snug">
-      {children}
-    </p>
-  );
-};
-
-const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
-  return (
-    <p
-      className={cn(
-        "text-sm md:text-base  max-w-4xl text-left mx-auto",
-        "text-neutral-500 text-center font-normal dark:text-neutral-300",
-        "text-left max-w-sm mx-0 md:text-sm my-2"
-      )}
-    >
-      {children}
-    </p>
-  );
-};
-
-export const SkeletonOne = () => {
-  return (
-    <div className="relative flex py-8 px-2 gap-10 h-full">
-      <div className="w-full  p-5  mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
-        <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
-          {/* TODO */}
-          <Image
-            src="/linear.webp"
-            alt="header"
-            width={800}
-            height={800}
-            className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
-          />
-        </div>
-      </div>
-
-      <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
-      <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
-    </div>
-  );
-};
-
-
-
-export const SkeletonFour = () => {
-  return (
-    <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
-      <Globe className="absolute -right-10 md:-right-10 -bottom-80 md:-bottom-72" />
-    </div>
-  );
-};
-
-export const Globe = ({ className }: { className?: string }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    let phi = 0;
-
-    if (!canvasRef.current) return;
-
-    const globe = createGlobe(canvasRef.current, {
-      devicePixelRatio: 2,
-      width: 600 * 2,
-      height: 600 * 2,
-      phi: 0,
-      theta: 0,
-      dark: 1,
-      diffuse: 1.2,
-      mapSamples: 16000,
-      mapBrightness: 6,
-      baseColor: [0.3, 0.3, 0.3],
-      markerColor: [0.1, 0.8, 1],
-      glowColor: [1, 1, 1],
-      markers: [
-        // longitude latitude
-        { location: [37.7595, -122.4367], size: 0.03 },
-        { location: [40.7128, -74.006], size: 0.1 },
-      ],
-      onRender: (state) => {
-        // Called on every animation frame.
-        // `state` will be an empty object, return updated params.
-        state.phi = phi;
-        phi += 0.01;
-      },
-    });
-
-    return () => {
-      globe.destroy();
-    };
-  }, []);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
-      className={className}
-    />
-  );
-};

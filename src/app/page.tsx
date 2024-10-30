@@ -7,10 +7,9 @@ import  MarqueeDemoVertical from './components/Testimonial/page';
 import  {MacbookScrollDemo} from "./components/Stats";
 import  Extra  from "./components/Extra";
 import HeroVideoDialogDemo from "./components/ui/section-video";
-import Pricing from "./components/pricing";
 import { HeroScrollDemo } from "./components/containerScroll";
 import HeroParallaxWithBlurFade  from "./components/templates";
-import { FeaturesSectionDemo } from './components/blocks';
+import Blocks from './components/blocks';
 
 
 export default function Home() {
@@ -22,9 +21,8 @@ export default function Home() {
       <Extra /> 
       <HeroScrollDemo />
       <HeroParallaxWithBlurFade/>
-      <FeaturesSectionDemo />
+      <Blocks />
       <HeroVideoDialogDemo/>
-      <Pricing />
       <MarqueeDemoVertical />
       <Footer />
      
